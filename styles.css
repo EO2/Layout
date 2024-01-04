@@ -24,7 +24,7 @@ main {
   background-color: white;
   /* lager rom rundt main */
   /*padding: 5rem;*/
-  margin: 2rem;
+  margin: 0 2rem; /* 0 oppe og nede, 2rem på hver side */
 }
 
 /* Felles stil for både header og footer.. bruker komma for å velge begge sammen */
