@@ -71,8 +71,8 @@ header {
   /* Her velges alle bilder i header.. gjør mer spesifikt om du har flere bilder her */
   img {
     height: 3rem;
-    width: 3rem; /* setter egentlig kun høyde, så blir denne automatisk når du faktisk har et bilde.. */
-    border: 2px solid green; /* For å se størrelse på bilder uten å ha valgt noe bilde.. :) */
+    width: 3rem; /* bruker gjerne kun høyde, så blir denne automatisk når du faktisk har et bilde.. gjerne bruke max-width: 100% */
+    border: 2px solid green; /* Har du ikke bilde, så sett img inni en div, og sett høyde der for "preview". Eller placeholder img api.. */
   }
 
   /* Meny */
