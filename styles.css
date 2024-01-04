@@ -37,6 +37,7 @@ header, footer {
   padding: 4rem; /* rem er størrelse i forhold til skjerm - ofte brukt istedenfor px (pixler) som ikke varierer. Denne lager plass både over/under og venstre/høyre */
   /* top | right | bottom | left */
   padding: 1rem 4rem 2rem 4rem; /* forkortelse for padding-top, padding-left, ...  (dette overkjører linjen over, så den gjør ingenting nå) */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/padding */
 }
 
 /* Her bruker vi Nesting.. Nylig støttet i alle nettlesere! Glede! */
