@@ -21,6 +21,7 @@ body {
 }
 
 main {
+  background-color: white;
   /* lager rom rundt main */
   /*padding: 5rem;*/
   margin: 2rem;
