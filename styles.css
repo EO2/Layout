@@ -1,7 +1,7 @@
 html {
   height: 100%; /* bruk all plass i høyde - ikke hvitt i bunn når det er lite innhold */
   box-sizing: border-box; /* ikke vesentlig nå */
-  background-color: darkgray; /* innebygget fargenavn for en del farger - alt som ikke har satt egen farge "arver" nå denne fargen her */
+  background-color: darkgray; /* innebygget fargenavn for en del farger - alt som ikke har satt egen farge "arver" nå denne fargen her. Settes oftest på body, men går her og.. */
 }
 
 /* Denne velger alt på siden.. * brukes ofte til å bety alt (wildcard) */
@@ -10,11 +10,15 @@ html {
 }
 
 body {
-  /*height: 100%;*/ /* bruk all plass i høyden (slått av siden vi setter min-height under grid..) */
+  /* bruk all plass i høyden (slått av siden vi setter min-height under grid..) */
+  /*height: 100%;*/
+  /* En pleier ofte å sette disse to til 0 til å begynne med.. Det nullstiller instillinger som ellers bestemmes av nettleseren selv.. Reset.. Kan og settes på html taggen. */
   padding: 0; /* avstand fra innhold til kant */
   margin: 0; /* avstand utenfor */
 
-  /* GRID - settes typisk ikke på <body>, men på en "wrapper"..  <div class="wrapper">Alt Innhold</div> */
+  /* GRID */
+  /* settes typisk ikke direkte på <body>, men på en "wrapper"..  <div class="wrapper">Alt Innhold</div> */
+  /* Her vil alt innenfor <body> være med i en Grid Layout - som er så enkel som mulig - deler siden i 3 deler: Top, Midt, Bunn */
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto; /* 1fr er 1 "fraksjon" - som her tar 100% av body minus header og footer */
@@ -24,13 +28,32 @@ main {
   background-color: white;
   /* lager rom rundt main */
   padding: 2rem; /* luft rundt innhold */
-  margin: 0 4rem; /* 0 oppe og nede, 2rem på hver side */
+  margin: 0 4rem; /* 0 oppe og nede, 2rem på hver side - Dette lar bakgrunnsfargen (i <html>) vises på hver av sidene. Margen gjør main boksen smalere.. */
 }
 
 /* Felles stil for både header og footer.. bruker komma for å velge begge sammen */
 header, footer {
-  background-color: #eee; /* hexadecimal fargekode..  lettere å bruke rgb(50, 50, 50) - men fint å vite om hex */
+  background-color: #eee; /* hexadecimal forkortet fargekode..  lettere å bruke rgb(50, 50, 50) - men fint å vite om hex */
   padding: 4rem; /* rem er størrelse i forhold til skjerm - ofte brukt istedenfor px (pixler) som ikke varierer. Denne lager plass både over/under og venstre/høyre */
   /* top | right | bottom | left */
-  padding: 1rem 4rem 2rem 4rem; /* forkortelse for padding-top, padding-left, ... */
+  padding: 1rem 4rem 2rem 4rem; /* forkortelse for padding-top, padding-left, ...  (dette overkjører linjen over, så den gjør ingenting nå) */
+}
+
+/* Her bruker vi Nesting.. Nylig støttet i alle nettlesere! Glede! */
+header {
+
+  /* Logo */
+  /* Her velges alle bilder i header.. gjør mer spesifikt om du har flere bilder her */
+  img {
+    height: 3rem;
+    width: 3rem; /* setter egentlig kun høyde, så blir denne automatisk når du faktisk har et bilde.. */
+    border: 2px solid green; /* For å se størrelse på bilder uten å ha valgt noe bilde.. :) */
+  }
+
+  /* Meny */
+  nav {
+    a {
+      text-decoration: none; /* Drep strek under URL */
+    }
+  }
 }
