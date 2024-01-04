@@ -47,7 +47,7 @@ Header
 header > img {
   height: 3rem;
   width: 3rem;
-  border: 2px solid green;
+  border: 1px solid green;
 }
 
 header li {
@@ -60,10 +60,9 @@ header nav a {
 
 /* 
 Header
-
-Her bruker vi Nesting.. 
+- Her bruker vi Nesting.. 
 Nylig støttet i alle nettlesere! Glede! 
-Men nettleserne må være oppdatert (fra høst 2023) 
+Men nettleserne må være oppdatert (fra høst 2023) - så funker ikke på TV macen, og vet ikke med din mac? 
 */
 header {
 
@@ -72,7 +71,7 @@ header {
   img {
     height: 3rem;
     width: 3rem; /* bruker gjerne kun høyde, så blir denne automatisk når du faktisk har et bilde.. gjerne bruke max-width: 100% */
-    border: 2px solid green; /* Har du ikke bilde, så sett img inni en div, og sett høyde der for "preview". Eller placeholder img api.. */
+    border: 1px solid green; /* Har du ikke bilde, så sett img inni en div, og sett høyde der for "preview". Eller placeholder img api.. */
   }
 
   /* Meny */
