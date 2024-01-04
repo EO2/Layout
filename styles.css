@@ -1,7 +1,7 @@
 html {
   height: 100%; /* bruk all plass i høyde - ikke hvitt i bunn når det er lite innhold */
   box-sizing: border-box; /* ikke vesentlig nå */
-  background-color: dark-grey; /* innebygget fargenavn for en del farger - alt som ikke har satt egen farge "arver" nå denne fargen her */
+  background-color: darkgray; /* innebygget fargenavn for en del farger - alt som ikke har satt egen farge "arver" nå denne fargen her */
 }
 
 /* Denne velger alt på siden.. * brukes ofte til å bety alt (wildcard) */
@@ -31,5 +31,6 @@ main {
 header, footer {
   background-color: #eee; /* hexadecimal fargekode..  lettere å bruke rgb(50, 50, 50) - men fint å vite om hex */
   padding: 4rem; /* rem er størrelse i forhold til skjerm - ofte brukt istedenfor px (pixler) som ikke varierer. Denne lager plass både over/under og venstre/høyre */
-  padding: 1rem 2rem 4rem 4rem; /* forkortelse for padding-top, padding-left, ... */
+  /* top | right | bottom | left */
+  padding: 1rem 4rem 2rem 4rem; /* forkortelse for padding-top, padding-left, ... */
 }
