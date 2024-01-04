@@ -1,14 +1,32 @@
 html {
-  height: 100%;
-  box-sizing: border-box;
+  height: 100%; /* bruk all plass i høyde - ikke hvitt i bunn når det er lite innhold */
+  box-sizing: border-box; /* ikke vesentlig nå */
+}
+
+/* Denne velger alt på siden.. * brukes ofte til å bety alt (wildcard) */
+* {
+  box-sizing: inherit; /* ikke vesentlig nå */
 }
 
 body {
-  height: 100%;
-  padding: 0;
-  margin: 0;
+  /*height: 100%;*/ /* bruk all plass i høyden (slått av siden vi setter min-height under grid..) */
+  padding: 0; /* avstand fra innhold til kant */
+  margin: 0; /* avstand utenfor */
+
+  /* GRID - settes typisk ikke på <body>, men på en "wrapper"..  <div class="wrapper">Alt Innhold</div> */
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-* {
-  box-sizing: inherit;
+main {
+  /* lager rom rundt main */
+  /*padding: 5rem;*/
+  margin: 2rem;
+}
+
+/* Felles stil for både header og footer.. bruker komma for å velge begge sammen */
+header, footer {
+  background-color: #eee; /* hexadecimal fargekode..  lettere å bruke rgb(50, 50, 50) - men fint å vite om hex */
+  padding: 2rem; /* rem er størrelse i forhold til skjerm - ofte brukt istedenfor px (pixler) som ikke varierer. */
 }
