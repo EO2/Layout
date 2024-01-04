@@ -31,5 +31,5 @@ main {
 header, footer {
   background-color: #eee; /* hexadecimal fargekode..  lettere å bruke rgb(50, 50, 50) - men fint å vite om hex */
   padding: 4rem; /* rem er størrelse i forhold til skjerm - ofte brukt istedenfor px (pixler) som ikke varierer. Denne lager plass både over/under og venstre/høyre */
-  padding: 1rem 4rem 4rem 2rem; /* forkortelse for padding-top, padding-left, ... */
+  padding: 1rem 2rem 4rem 4rem; /* forkortelse for padding-top, padding-left, ... */
 }
