@@ -23,7 +23,7 @@ body {
 main {
   background-color: white;
   /* lager rom rundt main */
-  /*padding: 5rem;*/
+  padding: 2rem; /* luft rundt innhold */
   margin: 0 4rem; /* 0 oppe og nede, 2rem på hver side */
 }
 
