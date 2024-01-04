@@ -52,6 +52,10 @@ header {
 
   /* Meny */
   nav {
+    /* Elementer inni <nav> taggen */
+    li {
+      list-style-type: none; /* Drep prikkene på "list items" innenfor "unordered list" (<ul><li>...) */
+    }
     a {
       text-decoration: none; /* Drep strek under URL */
     }
