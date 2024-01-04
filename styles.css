@@ -40,7 +40,7 @@ header, footer {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/padding */
 }
 
-/* Her bruker vi Nesting.. Nylig støttet i alle nettlesere! Glede! */
+/* Her bruker vi Nesting.. Nylig støttet i alle nettlesere! Glede! Men nettleserne må være oppdatert (fra høst 2023) */
 header {
 
   /* Logo */
@@ -53,12 +53,21 @@ header {
 
   /* Meny */
   nav {
+    
     /* Elementer inni <nav> taggen */
     li {
       list-style-type: none; /* Drep prikkene på "list items" innenfor "unordered list" (<ul><li>...) */
     }
+    
+    /* Linker */
     a {
       text-decoration: none; /* Drep strek under URL */
     }
+
+    /* & var ment å ha foran alle "nøstede" regler - men kommer til å virke uten fremover.. */
+    & a {
+      text-decoration: none;
+    }
+    
   }
 }
