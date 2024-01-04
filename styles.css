@@ -1,7 +1,7 @@
 html {
   height: 100%; /* bruk all plass i høyde - ikke hvitt i bunn når det er lite innhold */
   box-sizing: border-box; /* ikke vesentlig nå */
-  background-color: black; /* innebygget fargenavn for en del farger - alt som ikke har satt egen farge "arver" nå denne fargen her */
+  background-color: dark-gray; /* innebygget fargenavn for en del farger - alt som ikke har satt egen farge "arver" nå denne fargen her */
 }
 
 /* Denne velger alt på siden.. * brukes ofte til å bety alt (wildcard) */
