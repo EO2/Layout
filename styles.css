@@ -40,7 +40,31 @@ header, footer {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/padding */
 }
 
-/* Her bruker vi Nesting.. Nylig støttet i alle nettlesere! Glede! Men nettleserne må være oppdatert (fra høst 2023) */
+/*
+Header
+- Gamle måten
+*/
+header > img {
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid green;
+}
+
+header li {
+  list-style-type: none;
+}
+
+header nav a {
+  text-decoration: none;
+}
+
+/* 
+Header
+
+Her bruker vi Nesting.. 
+Nylig støttet i alle nettlesere! Glede! 
+Men nettleserne må være oppdatert (fra høst 2023) 
+*/
 header {
 
   /* Logo */
