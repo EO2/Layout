@@ -50,6 +50,10 @@ header > img {
   border: 1px solid green;
 }
 
+header nav {
+  justify-self: right;
+}
+
 header li {
   list-style-type: none;
 }
