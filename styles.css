@@ -1,3 +1,5 @@
+@import url(typography.css);
+
 html {
   height: 100%; /* bruk all plass i høyde - ikke hvitt i bunn når det er lite innhold */
   box-sizing: border-box; /* ikke vesentlig nå */
