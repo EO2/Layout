@@ -8,6 +8,58 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <style>
+      form div {
+        display: flex;
+        /* justify-content: space-between; */
+        gap: 1.5rem;
+        width: 20rem;
+        margin-bottom: 2rem;
+      }
+      form div div {
+        display: flex;
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+      form label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        height: inherit;
+        width: inherit;
+        z-index: 10;
+      }
+      form input[type="radio"] {
+        appearance: none;
+        position: absolute;
+        background-color: gray;
+        border-radius: 50%;
+        margin: 0;
+        height: inherit;
+        width: inherit;
+      }
+      form input[type="radio"]:checked {
+        background-color: lightgrey;
+        box-shadow: 0.1rem 0.1rem 0.2rem /*1rem*/ gray;
+      }
+      .circle {
+        height: unset;
+        width: unset;
+        /* height: 2rem;
+        width: 2rem; */
+      }
+      .right {
+        background-color: gray;
+        border-bottom-right-radius: 2rem * 2;
+        border-top-right-radius: 2rem * 2;
+      }
+      .left {
+        background-color: orangered;
+        border-bottom-left-radius: 2rem * 2;
+        border-top-left-radius: 2rem * 2;
+      }
+    </style>
     <header>
       <h1>Headline 1</h1>
       <img src="https://placehold.co/600x400" alt="site logo">
@@ -36,87 +88,35 @@
         <p>More article content</p>
         <p>... then some</p>
       </article>
-      <style>
-        form div {
-          display: flex;
-          /* justify-content: space-between; */
-          gap: 1.5rem;
-          width: 20rem;
-          margin-bottom: 2rem;
-        }
-        form div div {
-          display: flex;
-          height: 2.5rem;
-          width: 2.5rem;
-        }
-        form label {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: bold;
-          height: inherit;
-          width: inherit;
-          z-index: 10;
-        }
-        form input[type="radio"] {
-          appearance: none;
-          position: absolute;
-          background-color: gray;
-          border-radius: 50%;
-          margin: 0;
-          height: inherit;
-          width: inherit;
-        }
-        form input[type="radio"]:checked {
-          background-color: lightgrey;
-          box-shadow: 0.1rem 0.1rem 0.2rem /*1rem*/ gray;
-        }
-        .circle {
-          height: unset;
-          width: unset;
-          /* height: 2rem;
-          width: 2rem; */
-        }
-        .right {
-          background-color: gray;
-          border-bottom-right-radius: 2rem * 2;
-          border-top-right-radius: 2rem * 2;
-        }
-        .left {
-          background-color: orangered;
-          border-bottom-left-radius: 2rem * 2;
-          border-top-left-radius: 2rem * 2;
-        }
-      </style>
       <article>
         <h3>Form stuff</h3>
         <form>
           <div>
             <div>
               <label for="s">S</label>
-              <input type="radio" name="size" id="s" />
+              <input type="radio" name="size" id="s">
             </div>
             <div>
               <label for="m">M</label>
-              <input type="radio" name="size" id="m" />
+              <input type="radio" name="size" id="m">
             </div>
             <div>
               <label for="l">L</label>
-              <input type="radio" name="size" id="l" />
+              <input type="radio" name="size" id="l">
             </div>
             <div>
               <label for="xl">XL</label>
-              <input type="radio" name="size" id="xl" />
+              <input type="radio" name="size" id="xl">
             </div>
           </div>
           <div class="color">
             <div>
-              <input type="radio" name="color" id="orange" />
+              <input type="radio" name="color" id="orange">
               <div class="left"></div>
               <div class="right"></div>
             </div>
             <div>
-              <input type="radio" name="color" id="yellow" />
+              <input type="radio" name="color" id="yellow">
             </div>
           </div>
         </form>
