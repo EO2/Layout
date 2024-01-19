@@ -34,7 +34,8 @@ main {
 }
 
 /* Felles stil for både header og footer.. bruker komma for å velge begge sammen */
-header, footer {
+header,
+footer {
   background-color: #eee; /* hexadecimal forkortet fargekode..  lettere å bruke rgb(50, 50, 50) - men fint å vite om hex */
   padding: 4rem; /* rem er størrelse i forhold til skjerm - ofte brukt istedenfor px (pixler) som ikke varierer. Denne lager plass både over/under og venstre/høyre */
   /* top | right | bottom | left */
@@ -72,7 +73,6 @@ Nylig støttet i alle nettlesere! Glede!
 Men nettleserne må være oppdatert (fra høst 2023) - så funker ikke på TV macen, og vet ikke med din mac? 
 */
 header {
-
   /* Logo */
   /* Her velges alle bilder i header.. gjør mer spesifikt om du har flere bilder her */
   img {
@@ -83,12 +83,11 @@ header {
 
   /* Meny */
   nav {
-    
     /* Elementer inni <nav> taggen */
     li {
       list-style-type: none; /* Drep prikkene på "list items" innenfor "unordered list" (<ul><li>...) */
     }
-    
+
     /* Linker */
     a {
       text-decoration: none; /* Drep strek under URL */
@@ -98,18 +97,19 @@ header {
     & a {
       text-decoration: none;
     }
-    
   }
 }
 
-form div {
+/* eller > :first-child for å kun gjelde første div, eller form + div ..*/
+form > div { 
   display: flex;
-  /* justify-content: space-between; */
-  gap: 1.5rem;
   width: 20rem;
   margin-bottom: 2rem;
 }
-form div div {
+.size, .color { /* velger samme som " > div" over */
+  gap: 1.5rem;
+}
+form div > div { /* .choice ..alle div innenfor div, alle valg */
   display: flex;
   height: 2.5rem;
   width: 2.5rem;
@@ -127,6 +127,7 @@ form input[type="radio"] {
   appearance: none;
   position: absolute;
   background-color: gray;
+  /* border: 2px solid hsl(0 0% 40%); */
   border-radius: 50%;
   margin: 0;
   height: inherit;
@@ -134,7 +135,15 @@ form input[type="radio"] {
 }
 form input[type="radio"]:checked {
   background-color: lightgrey;
-  box-shadow: 0.1rem 0.1rem 0.2rem /*1rem*/ gray;
+  border: 2px solid hsl(0 0% 20%);
+  box-shadow: .1rem .2rem .2rem hsl(0 0% 30%);
+}
+.color input[type=radio] {
+  background-color: unset;
+  border: unset;
+}
+.color input[type=radio]:checked {
+  background-color: hsl(0 0% 100% / .1); /* or unset */
 }
 .circle {
   display: flex;
@@ -148,10 +157,19 @@ form input[type="radio"]:checked {
   border-bottom-right-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
 }
+input[type=radio]:checked ~¨.right{
+  background-color: red;
+}
 .left {
-  background-color: orangered;
+  /* background-color: orangered; */
   height: 2.5rem;
   width: 50%;
   border-bottom-left-radius: 2.5rem;
   border-top-left-radius: 2.5rem;
+}
+.orange {
+  background-color: orangered;
+}
+.purple {
+  background-color: darkslateblue;
 }
