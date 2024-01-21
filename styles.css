@@ -44,8 +44,7 @@ footer {
 }
 
 /*
-Header
-- Gamle måten
+  Header
 */
 header > img {
   height: 3rem;
@@ -53,17 +52,21 @@ header > img {
   border: 1px solid green;
 }
 
-header nav {
-  justify-self: right;
+header ul {
+  display: flex;
 }
 
 header li {
-  display: inline-block;
   list-style-type: none;
+}
+
+.menu-right {
+  margin-left: auto;
 }
 
 header nav a {
   text-decoration: none;
+  padding: 1rem;
 }
 
 /* 
