@@ -185,3 +185,7 @@ a.btn {
 }
 
 a { appearance: button; }
+
+.btn {
+  appearance: button;
+}
