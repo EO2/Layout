@@ -183,3 +183,5 @@ a.btn {
   appearance: button;
   color: red;
 }
+
+a { appearance: button; }
