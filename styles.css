@@ -1,5 +1,14 @@
 @import url(typography.css);
 
+/* Reset / Normalize */
+/*
+Josh - short reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+
+Necolas - short normalize
+https://github.com/necolas/normalize.css/blob/master/normalize.css
+*/
+
 html {
   height: 100%; /* bruk all plass i høyde - ikke hvitt i bunn når det er lite innhold */
   box-sizing: border-box; /* ikke vesentlig nå */
